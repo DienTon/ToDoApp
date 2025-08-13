@@ -9,7 +9,7 @@ export const getAll = async () => {
     console.error(error);
   }
 };
-export const addNew = async (blog) => {
+export const addNew = async (Todos) => {
   try {
     await axios.post("http://localhost:8080/ ", Todos);
     return true;

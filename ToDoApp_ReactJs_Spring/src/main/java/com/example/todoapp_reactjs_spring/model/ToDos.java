@@ -12,10 +12,9 @@ public class ToDos {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private String title;
-    private String description;
-    private String status;
+    private Boolean status = false;
     private LocalDateTime dueDate;
-    private LocalDateTime createAt;
+    private LocalDateTime createAt= LocalDateTime.now();
     private LocalDateTime updated_At;
 
     public ToDos() {
@@ -37,19 +36,11 @@ public class ToDos {
         this.title = title;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
-    public String getStatus() {
+    public Boolean getStatus() {
         return status;
     }
 
-    public void setStatus(String status) {
+    public void setStatus(Boolean status) {
         this.status = status;
     }
 

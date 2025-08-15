@@ -17,3 +17,12 @@ export const addNew = async (Todos) => {
     return false;
   }
 };
+export const deleteTask = async (id) => {
+  try {
+    await axios.delete(`http://localhost:8080/?id=${id}`);
+    return true;
+  } catch (error) {
+    console.error("Error deleting task:", error);
+    return false;
+  }
+}
